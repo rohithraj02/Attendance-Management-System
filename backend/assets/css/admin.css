@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=PT+Sans&display=swap');
+
+:root{
+    --dark:color=black;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+
+a{
+    text-decoration: none;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.container{
+    max-width:1024px;
+    margin:auto;
+}
+
+.nav-brand{
+    font-size:1.5em;
+    font-weight:bold;
+}
+.d-flex{
+    display:flex;
+    flex-wrap: wrap;
+}
+.justify-betwen{
+    justify-content: space-between;
+}
+.text-center{
+    text-align: center;
+}
+.border-shadow{
+    border:1px solidz;
+    box-shadow: 1px 3px 10px color=black;
+}
+/*comment from here if needed*/
+.text-dark{
+    color:var(--dark);
+}
+.inline{
+    display:inline-block;
+}
+.text-light{
+    color:white;
+}
+/* .text-gradient{
+    background:linear-gradient(to right,color=pink,color=purple);
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+#header nav{
+    background-color:green;
+    padding: 1em 0;
+    width: 100%;
+}
+#site-main{
+    margin-top:6em;
+    font-family: 'Barlow',sans-serif;
+} */
+table{
+    border-spacing: 0px;
+    width:100%;
+}
+.table td, .table th{
+    padding:.75em;
+    vertical-align:top;
+    text-align:center;
+    border-top:1px solid;
+}
+.table td>a.btn{
+    padding:.3em 1em;
+    font-size: 1.1em;
+    margin: 0.2 em;
+}
+.table tr:hover{
+    background-color:rgb(141, 122, 240);
+}
+.table .thread-dark th{
+    color:aliceblue;
+    background-color: black;
+    border-color:rgb(0, 0, 0);
+}
+.btn {
+    margin: 0px 10px;
+    color: white;
+    background-color: black;
+    padding: 4px 9px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    font-size: 12px;
+    cursor: pointer;
+}

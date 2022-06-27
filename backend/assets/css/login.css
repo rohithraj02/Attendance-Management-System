@@ -1,0 +1,44 @@
+
+.box-content{
+    margin-top: 50px;
+    margin-bottom: 100px;
+    height: 380px;
+    width: 500px;
+    font-size: 20px;
+    text-align: center;
+    background-color: var(--btn-color);
+    border-radius: 6px;
+}
+
+.forms{
+    margin:0px;
+    padding: 20px;
+}
+
+.form-input2 {
+    text-align: center;
+    padding: 0px 60px;
+    padding-top: 9px;
+    font-size: 25px;
+    border: 2px solid black;
+    border-radius: 6px;
+    margin: 0px 13px;
+    font-family: var(--font1);
+}
+
+.btn2 {
+    width: 426px;
+    padding: 0px 60px;
+    padding-top: 9px;
+    border: 2px solid black;
+    border-radius: 6px;
+    font-family: var(--font1);
+    font-size: 25px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.btn2:hover{
+    color: white;
+    background-color: var(--btn-color);
+}
