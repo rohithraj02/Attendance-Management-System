@@ -1,5 +1,5 @@
 exports.homeRoutes=(req,res)=>{
-    res.render('index',{users:"NEW DATA"});
+    res.render('index');
 }
 // exports.teacher=(req,res)=>{
 //     res.render('teacher');
