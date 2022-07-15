@@ -49,23 +49,41 @@
                         <tr>
                             <th>Sl. No</th>
                             <th>USN</th>
-                            <th>SUBJECT NAME</th>
-                            <th>SUBJECT CODE</th>
-                            <th>Number of Class<br>
-                                <!-- <input type="checkbox" onClick="toggle(this)"> -->
+                            <th>NAME</th>
+                            <th>Mark Attendance<br>
+                                <input type="checkbox" onClick="toggle(this)">
                                 <!-- <input type="checkbox" onClick="toggle(this)"> -->
                             </th>
-                            <!-- <th>Attendance status</th> -->
+                            <th>Attendance status</th>
                         </tr>
                     </thread>
+                    <tbody>
+                        <% for(var i=0;i<users.length;i++){%>
+                            <tr>
+                                <td><%=i+1%></td>
+                                <td><%=users[i].usn%></td>
+                                <td><%=users[i].name%></td>
+                                <td>
+                                    <!-- <a class="btn-border-shadow delete" data-id=<%=users[i]._id%>>
+                                        <span class="text-gradient"><i class="fas fa-times"></i></span>
+                                    </a> -->
+                                    <form>
+                                    <input type="checkbox" name = "Att" value="present" id="<%=users[i].present%>">
+                                    <!-- <input type="checkbox" name = "Att" value="absent" onclick="return validateAtt();"> -->
+                                    </form>
 
+                                </td>
+                                <td><%=users[i].present%>/40</td>
+                            </tr>
+                            <%}%>
+                    </tbody>
                 </table>
             </form>
         </div>
         <button  type="button" class="form-submit-button " onclick="return validateAtt();">Submit</button>
     </center>
     </main>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <!-- <script src="/js/.js"></script> -->
 
 <script src="js/attendance_validation.js">

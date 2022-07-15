@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,9 +19,9 @@
 
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="/teacher">Teacher</a></li>
+                <li><a href="teacher">Teacher</a></li>
                 <li><a href="student">Student</a></li>
-                <li><a href="admin_login">Admin</a></li>
+                <li><a href="Admin">Admin</a></li>
             </ul>
 
         </div>
@@ -41,22 +40,25 @@
             <div class="box-content m-auto m-auto">
                 
                 <div class="forms">
-                    <h2>Student Login</h2>
+                    <h2>Admin Login</h2>
                 </div>
-                <div class="forms">
-                    <form>
-                    <!-- <label>Username : </label> -->
-                    <input type="text" class="form-input2" placeholder="Username" name="username" id="userInput" >
-                </form>
+                <forms>
+                    <div class="forms">
+                    
+                        <input type="text" class="form-input2" id="username" placeholder="Username" name="username" required>
+                    </div>
+                    <div class="forms">
+    
+     
+                        <input type="password" class="form-input2" id="password" placeholder="Password" name="password" required>
+                    </div>
                 <div class="forms">
                     <!-- <a href="mark_att">Click here</a> -->
-                    <button  type="submit" onclick="otname()" class="btn2">Login</button>      
+                    <button  type="submit" onclick="user1()" class="btn2">Login</button>
+                    
+                        
                 </div>
-                </div>
-                 <!-- <div class="forms">
-
-                    <button  type="submit" onclick="location.href='student_login';" class="btn2">Login</button>
-                </div> -->
+            </forms>
                 <!-- <div class="forms">
                     <input type="checkbox" checked="checked"> Remember me
                     <button type="button" class="btn"> Cancel</button>
@@ -81,18 +83,15 @@
     </div>
 </body>
 <script>
-function otname()
-{
-// var input = document.getElementById("userInput").value;
-// alert(input);
-// window.open("student-page","_self")
-var user = document.getElementById('userInput').value
-//   if (user == "hi") {
-    window.open("student-page","_self")
+    function user1() {
+  var user = document.getElementById('username').value
+  var pass = document.getElementById('password').value
+  if (user == "admin" && pass == "admin123") {
+    window.open("admin","_self")
     alert('correct username')
-//   } else {
-    // alert('incorrect username or password')
-//   }
+  } else {
+    alert('incorrect username or password')
+  }
 }
 </script>
 </html>

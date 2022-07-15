@@ -17,7 +17,7 @@
             <img src="img/nhce.png" alt="">
             
             <ul>
-                <li><a href="/index">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="/teacher">Teacher</a></li>
                 <li><a href="/student">Student</a></li>
                 <li><a href="admin_login">Admin</a></li>
@@ -33,30 +33,35 @@
     <div class="max_width1 m-auto"><hr></div>
     <main id="site-main">
         <center>
+            <br>
         <div class="container">
-            <div class="box-nav d-flex-justify-between">
-                <br><br>
-                <div class="filter">
-                    <a href="Admin"><i class="fas fa-angle-double-left"></i>View All Users</a>
-                </div>
-            </div>
-            <div class="form-title-text-center">
-                <h2 class="text-dark">New Student</h2>
-                <span class="text">Enter the new student details</span>
-            </div>
-            <br>    
-            <form method="POST" id="update_user">
-                <div class="form-group">
-                    <label for="name" class="text">Name</label>
-                    <input type="hidden" name="name" value="" placeholder="Enter name">
-                </div>
-                <div class="form-group">
-                    <label for="usn" class="text">Name</label>
-                    <input type="hidden" usn="usn" value="" placeholder="Enter usn">
-                </div>
-            </form>
-        </div>
-    </center>
+            <script>
+                window.onload = function() {
+                
+                var chart = new CanvasJS.Chart("chartContainer", {
+                    animationEnabled: true,
+                    title: {
+                        text: "Attendance"
+                    },
+                    data: [{
+                        type: "pie",
+                        startAngle: 240,
+                        yValueFormatString: "##0.00\"%\"",
+                        indexLabel: "{label} {y}",
+                        dataPoints: [
+                            {y: 79.45, label: "Present"},
+                            {y: 7.31, label: "Absent"},
+                        ]
+                    }]
+                });
+                chart.render();
+                
+                }
+                </script>
+           
+        </center>
     </main>
+<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </body>
 </html>

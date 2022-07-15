@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,50 +8,72 @@
     <title>ATTENDENCE NHCE</title>
     <link rel="stylesheet" href="css/utils.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
 </head>
+
 <body>
-     <!-- nav bar for menu -->
-     <nav class="navigation max_width1 m-auto">
+    <!-- nav bar for menu -->
+    <nav class="navigation max_width1 m-auto">
         <div class="nav-left">
             <img src="img/nhce.png" alt="">
-            
+
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="teacher">Teacher</a></li>
                 <li><a href="student">Student</a></li>
-                <li><a href="Admin">Admin</a></li>
+                <li><a href="admin_login">Admin</a></li>
             </ul>
 
         </div>
-            <div class="nav-right">
-                <input type="text" class="form-input" placeholder="search">
-                <button class="btn">Search</button>
+        <div class="nav-right">
+            <input type="text" class="form-input" placeholder="search">
+            <button class="btn">Search</button>
         </div>
     </nav>
-    <div class="max_width1 m-auto"><hr></div>
-    <div class="teacher_form max_width1 m-auto">
-        <br><br><br><br><br>
-        <h2>Teacher's Login Page</h2><br>
-        <br><br>
-        <form>  
-            <div class="container">   
-                <label>Username : </label>   
-                <input type="text" class="credential-input" placeholder="Enter Username" name="username" required>  
-                <br>
-                <br>
-                <label>Password : </label>   
-                <input type="password" class="credential-input" placeholder="Enter Password" name="password" required>  
-                <br>
-                <br>
-                <button type="submit" class="butt">Login</button>  
-                <button type="submit" class="butt">Register</button>  
-                <br> <br>
-                <input type="checkbox" checked="checked" class="check_box"> Remember me  <br>  
-                Forgot <a href="#"> password? </a>   
-            </div>   
-        </form> 
+    <div class="max_width1 m-auto">
+        <hr>
     </div>
-    <div class="T_content max_width2 m-auto"></div>
+    <div class="teacher_form max_width1 m-auto">
+        <br><br>
+        <form>
+            <!-- <div class="content max_width1 m-auto">    -->
+            <div class="box-content m-auto m-auto">
+                
+                <div class="forms">
+                    <h2>Teacher Login</h2>
+                </div>
+                <form>
+                <div class="forms">
+                    
+                    <input type="text" class="form-input2" id="username" placeholder="Username" name="username" required>
+                </div>
+                <div class="forms">
+
+ 
+                    <input type="password" class="form-input2" id="password" placeholder="Password" name="password" required>
+                </div>
+                
+                    <!-- <input type="text" name="username" id="username" Placeholder="enter username"><br>
+                    <input type="password" name="password" id="password" Placeholder="enter password"><br> -->
+                    <!-- <button onclick="user1()">Submit</button> -->
+                    <!-- onclick="location.href='mark_att';"  -->
+                <div class="forms">
+                    <!-- <a href="mark_att">Click here</a> -->
+                    <button  type="submit" onclick="user1()" class="btn2">Login</button>
+                    
+                        
+                </div>
+            </form>
+                <!-- <div class="forms">
+                    <input type="checkbox" checked="checked"> Remember me
+                    <button type="button" class="btn"> Cancel</button>
+                    Forgot <a href="#"> password? </a>
+                </div> -->
+
+                <!-- </div> -->
+            </div>
+        </form>
+    </div>
     <div class="about max_width1 m-auto contact">
         <div>
             <span>phone <br> 97324789/92384779823</span>
@@ -58,10 +81,22 @@
         <div>
             <span>gmail <br> managment@newhorizonindia.edu</span>
         </div>
-      </div>
-      <!-- this for footer  copyright thing -->
-      <div class="footer max_width1 m-auto">
-           <span>&#169 New horizon Educational Institution</span>
-      </div>
-  </body>
-  </html>
+    </div>
+    <!-- this for footer  copyright thing -->
+    <div class="footer max_width1 m-auto">
+        <span>&#169 New horizon Educational Institution</span>
+    </div>
+</body>
+<script>
+    function user1() {
+  var user = document.getElementById('username').value
+  var pass = document.getElementById('password').value
+  if (user == "teacher" && pass == "teacher123") {
+    window.open("mark_att","_self")
+    alert('correct username')
+  } else {
+    alert('incorrect username or password')
+  }
+}
+</script>
+</html>

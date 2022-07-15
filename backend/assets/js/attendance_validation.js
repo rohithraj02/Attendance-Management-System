@@ -21,7 +21,7 @@ function validateAtt()
 {  
     
     var numberOfCheckedItems = 0;  
-    const ar[];
+    // const ar[];
     for(var i = 0; i < checkboxes.length; i++)  
     {  
         if(checkboxes[i].checked)  

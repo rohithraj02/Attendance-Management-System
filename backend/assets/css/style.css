@@ -56,10 +56,7 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     line-height: 300%;
 }
-.T_content{
-    height: 1030px;
-    line-height: 200%;
-}
+
 .contact {
 
     height: 74px;
@@ -102,13 +99,7 @@
   }
 .teacher_form{
     text-align: center;
-    font-size: 40px;
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-        
+    font-size: larger;
+    
 }
   

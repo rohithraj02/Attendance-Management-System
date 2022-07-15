@@ -5,9 +5,12 @@
     <td><%=users[i].usn%></td>
     <td><%=users[i].name%></td>
     <td>
-        <a href="'#" class="btn-border-shadow delete">
-            <span class="text-gradient"><i class="fas fa-times"></i></span>
-        </a>
+        <input type="hidden" id="delete-user" value="<%=users[i]._id%>">
+        <a href="/update_user?id=<%=users[i]._id%>" class="Update" ><i class=" fa fa-pencil-alt" aria-hidden="true"></i></a>
+        <a  onclick="dele();"class="delete" data-id=<%=users[i]._id%>> <i class=" fa fa-trash fa-lg" aria-hidden="true"></i></a>
     </td>
 </tr>
 <%}%>
+
+
+
