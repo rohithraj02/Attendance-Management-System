@@ -22,7 +22,7 @@
                 <li><a href="/">Home</a></li>
                 <li><a href="/teacher">Teacher</a></li>
                 <li><a href="student">Student</a></li>
-                <li><a href="Admin">Admin</a></li>
+                <li><a href="admin_login">Admin</a></li>
             </ul>
 
         </div>
@@ -44,18 +44,17 @@
                     <h2>Student Login</h2>
                 </div>
                 <div class="forms">
+                    <form>
                     <!-- <label>Username : </label> -->
-                    <input type="text" class="form-input2" placeholder="Username" name="username" required>
-                </div>
-                <div class="forms">
+                    <input type="text" class="form-input2" placeholder="Username" name="username" id="userInput" >
+                    <input type="submit" class="form-input2" placeholder="Username" name="username" onclick="otname();">
 
-                    <!-- <label>Password : </label> -->
-                    <input type="password" class="form-input2" placeholder="Password" name="password" required>
+                </form>
                 </div>
-                <div class="forms">
+                 <!-- <div class="forms">
 
-                    <button type="submit" class="btn2">Login</button>
-                </div>
+                    <button  type="submit" onclick="location.href='student_login';" class="btn2">Login</button>
+                </div> -->
                 <!-- <div class="forms">
                     <input type="checkbox" checked="checked"> Remember me
                     <button type="button" class="btn"> Cancel</button>
@@ -79,5 +78,11 @@
         <span>&#169 New horizon Educational Institution</span>
     </div>
 </body>
-
+<script>
+    function otname()
+{
+var input = document.getElementById("userInput").value;
+alert(input);
+}
+</script>
 </html>
