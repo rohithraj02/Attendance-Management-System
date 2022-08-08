@@ -24,3 +24,26 @@ $("#update_user").submit(function(event){
         alert("Data updated successfully");
     })
 })  
+
+// $("#mark_att").submit(function(event){
+//     event.preventDefault();
+//     // console.log($(update_user));
+//     var unindexed_array=$(mark_att).serializeArray();
+//     console.log(unindexed_array);
+// })
+
+function dele(){
+    // var id=$(this).attr("data-id")
+    var id=document.getElementById('delete-user').value;
+    console.log(id);
+    var request={
+        "url" : 'http://localhost:8080/api/users/'+id,
+        "method" : "DELETE"
+    }
+    if(confirm("Do you really want to delete this student?")){
+        $.ajax(request).done(function(response){
+            alert("Student deleted successfully");
+            location.reload()
+        })
+    }
+    }

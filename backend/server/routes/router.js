@@ -64,15 +64,6 @@ route.get('/student-page',(req,res)=>{
 route.get('/mark_att',(req,res)=>{
     axios.get('http://localhost:8080/api/users')
     .then(function(response){
-        // console.log(response)
-        const a=JSON.stringify(response.data);
-        fs.writeFile('../user.json', a, (err) => {
-            if (err) {
-                throw err;
-            }
-            console.log("JSON data is saved.");
-        });
-        // console.log(a)
         res.render('mark_att',{users:response.data});
     })
     .catch(err=>{
@@ -81,8 +72,9 @@ route.get('/mark_att',(req,res)=>{
 });
 //API
 route.post('/api/users',controller.create);
-route.get('/api/users',controller.find);
+route.get('/api/users/',controller.find);
 route.put('/api/users/:id',controller.update);
+// route.put('/api/users/updateCount/:id',controller.updateCount);
 route.delete('/api/users/:id',controller.delete);
 // route.post('/api/teachers',teacher_login.create);
 module.exports= route
