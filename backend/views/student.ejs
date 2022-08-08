@@ -42,6 +42,14 @@
                 
                 <div class="forms">
                     <h2>Student Login</h2>
+                    <% for(var i=0;i<users.length;i++){%>
+                            <input type="hidden" name="usn" value="<%=users[i].usn%>">
+                            <input type="hidden" name="name" value="<%=users[i].name%>">
+                            <input type="hidden" name="present" value="<%=users[i].present%>">
+                            <input type="hidden" name="v" value="<%=users[i].__v%>">
+                        
+                    <%}%>
+                        
                 </div>
                 <div class="forms">
                     <form>
@@ -81,18 +89,51 @@
     </div>
 </body>
 <script>
-function otname()
-{
+function otname(){
 // var input = document.getElementById("userInput").value;
 // alert(input);
 // window.open("student-page","_self")
+var usn=document.getElementsByName("usn");
+var name=document.getElementsByName("name");
+var present=document.getElementsByName("present");
+var vv=document.getElementsByName("v");
+// const map1 = new Map();
+u=[]
+n=[]
+p=[]
+v=[]
+for(var i=0;i<usn.length;i++){
+u.push(usn[i].value)
+n.push(name[i].value)
+p.push(present[i].value)
+v.push(vv[i].value)
+
+// map1.set('usn',usn[i].value)
+// map1.set('name',name[i].value)
+}
+
+
 var user = document.getElementById('userInput').value
+user=user.toUpperCase()
+console.log(user)
+flag=0
+index=0
+for(i=0;i<u.length;i++)
+{
+    if(user==u[i]){
+    index=i
+    flag=1;break;}
+}
+if(flag==1){
 //   if (user == "hi") {
-    window.open("student-page","_self")
+    window.open("student-page?usn="+u[index]+"&name="+n[index]+"&present="+p[index]+"&v="+v[index],"_self")
     alert('correct username')
 //   } else {
     // alert('incorrect username or password')
 //   }
+}
+else
+alert('Incorrect username')
 }
 </script>
 </html>

@@ -68,12 +68,15 @@
                                         <span class="text-gradient"><i class="fas fa-times"></i></span>
                                     </a> -->
                                     <form>
-                                    <input type="checkbox" name = "Att" value="present" id="<%=users[i].present%>">
+                                    <input type="checkbox" name = "Att" value="present">
+                                    <input type="hidden" name="id" id="id" value="<%=users[i]._id%>">
+                                    <input type="hidden" name="present" id="present" value="<%=users[i].present%>">
+                                    <input type="hidden" name="v" id="v" value="<%=users[i].__v%>">
                                     <!-- <input type="checkbox" name = "Att" value="absent" onclick="return validateAtt();"> -->
                                     </form>
 
                                 </td>
-                                <td><%=users[i].present%>/40</td>
+                                <td><%=users[i].present%>/<%=users[i].__v%></td>
                             </tr>
                             <%}%>
                     </tbody>
@@ -86,7 +89,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <!-- <script src="/js/.js"></script> -->
 
-<script src="js/attendance_validation.js">
+<script  src="js/attendance_validation.js">
     // /home/rohithraj/Documents/miniProject2/attendence management system/backend/assets/js/attendance_validation.js
     </script>
 </body>

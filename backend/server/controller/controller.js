@@ -12,7 +12,8 @@ const user = new Userdb({
     // sl: req.body.sl,
     name:req.body.name,
     usn:req.body.usn,
-    present:0
+    present:0,
+    total:0
     // status: req.body.status
 })
 
@@ -72,6 +73,8 @@ exports.update=(req,res)=>{
         res.status(500).send({message: "Error update user information"})
     })
 }
+
+
 //delete a user with specified user id
 exports.delete = (req,res)=>{
 const id = req.params.id;
@@ -92,3 +95,4 @@ Userdb.findByIdAndDelete(id)
     });
 });
 }
+
