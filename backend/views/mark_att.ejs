@@ -35,14 +35,8 @@
         <center>
         <div class="container">
             <div class="box-nav d-flex-justify-between">
-                <!-- <br><br>
-                <a href="add_user" class="border-shadow">               
-                <span class="text-gradient">Add New Student<i class="fa-solid fa-user"></i></span>
-                <!-- <span class="text-gradient">Delete Student<i class="fa-solid fa-user"></i></span> -->
-                <!-- </a>  -->
-                    <h2>Attendance</h2>
+                    <br><h2>Attendance</h2>
             <br>    
-            <!-- <form action="/" method="POST"> -->
             <form id ="attendance">
                 <table class="table">
                     <thread class="thread-dark">
@@ -52,7 +46,6 @@
                             <th>NAME</th>
                             <th>Mark Attendance<br>
                                 <input type="checkbox" onClick="toggle(this)">
-                                <!-- <input type="checkbox" onClick="toggle(this)"> -->
                             </th>
                             <th>Attendance status</th>
                         </tr>
@@ -77,6 +70,7 @@
 
                                 </td>
                                 <td><%=users[i].present%>/<%=users[i].__v%></td>
+
                             </tr>
                             <%}%>
                     </tbody>

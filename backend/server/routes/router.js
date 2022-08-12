@@ -1,15 +1,12 @@
 const express= require('express');
 const route=express.Router()
-const services=require('../services/render');// Uses render.js file for the routes
+// const services=require('../services/render');// Uses render.js file for the routes
 const controller = require('../controller/controller');
 const fs = require('fs');
 // const login_controller=require('../controller/login_controller')
-route.get('/',services.homeRoutes);
-
-//     // console.log('Request for home recieved');
-//     res.render('index');
-//     // res.sendFile(path.join(__dirname,'../index.html'));
-// })
+route.get('/',(req,res)=>{
+    res.render('index');
+});
 const axios = require('axios');
 // const teacher_login = require('../model/model');
 route.get('/teacher',(req,res)=>{

@@ -21,11 +21,11 @@ var schema = new mongoose.Schema({
         required:true
 
     },
-    total:{
-        type:Number,
-        required:true
+    // total:{
+    //     type:Number,
+    //     required:true
 
-    }
+    // }
 })
 // var Attendance_schema = new mongoose.Schema({
 //     at:{

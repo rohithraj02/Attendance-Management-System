@@ -35,35 +35,6 @@
     <div class="max_width1 m-auto">
         <hr>
     </div>
-    <!-- <main id="site-main">
-        <center>
-            <div class="container">
-                <script>
-                    window.onload = function () {
-
-                        var chart = new CanvasJS.Chart("chartContainer", {
-                            animationEnabled: true,
-                            // title: {
-                            //     text: "Attendance"
-                            // },
-                            data: [{
-                                type: "pie",
-                                startAngle: 240,
-                                yValueFormatString: "##0.00\"%\"",
-                                indexLabel: "{label} {y}",
-                                dataPoints: [
-                                    { y: 80, label: "Present" },
-                                    { y: 20, label: "Absent" },
-                                ]
-                            }]
-                        });
-                        chart.render();
-
-                    }
-                </script>
-        </center>
-    </main>
-    <div id="chartContainer" style="height: 370px; width: 100%;"></div> -->
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <script>
         const params = new URLSearchParams(window.location.search)
@@ -79,13 +50,14 @@
     document.write(' <center><h2>Name : '+ar[1][1]+' </h2></center>')
     document.write(' <center><h2>Class : IV C </h2></center>')
     document.write(' <center><h2>Subject : OOPs with Java </h2></center>')
-    document.write(' <center><h2>Present :'+ar[2][1]+' </h2></center>')
-    document.write(' <center><h2>Total :'+ar[3][1]+' </h2></center>')
+    document.write(' <center><h2>Number of classes present :'+ar[2][1]+' </h2></center>')
+    document.write(' <center><h2>Total number of classes:'+ar[3][1]+' </h2></center>')
     document.write('<div id="chartContainer" style="height: 370px; width: 100%;"></div> -->')
+    
+    presentPercent=ar[2][1]/ar[3][1]*100
+    console.log*presentPercent
+    absentPercent=100-presentPercent
     window.onload = function () {
-
-            presentPercent=ar[2][1]/ar[3][1]*100
-            absentPercent=100-presentPercent
 var chart = new CanvasJS.Chart("chartContainer", {
     animationEnabled: true,
     // title: {
@@ -103,9 +75,11 @@ var chart = new CanvasJS.Chart("chartContainer", {
     }]
 });
 chart.render();
-
 }
-    // document.write()
+    if(presentPercent<75)
+    document.write('<center>Your Attendance is low</center>')
+    else
+    document.write('<center>Your attendance is normal</center>')
     </script>
 </body>
 
